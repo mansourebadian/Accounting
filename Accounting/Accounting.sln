@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accounting.Buisiness", "Acc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accounting.Utilities", "Accounting.Utilities\Accounting.Utilities.csproj", "{35DB7CA5-D0F9-469E-9BC8-E606690158CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp2", "ConsoleApp2\ConsoleApp2.csproj", "{90E25A20-2E21-438C-A720-78335C5399C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{35DB7CA5-D0F9-469E-9BC8-E606690158CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35DB7CA5-D0F9-469E-9BC8-E606690158CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35DB7CA5-D0F9-469E-9BC8-E606690158CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90E25A20-2E21-438C-A720-78335C5399C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90E25A20-2E21-438C-A720-78335C5399C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90E25A20-2E21-438C-A720-78335C5399C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90E25A20-2E21-438C-A720-78335C5399C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
