@@ -1,0 +1,8 @@
+D:\c#projects\2\Accounting\Accounting\Accounting.App\bin\Debug\Accounting.App.exe.config
+D:\c#projects\2\Accounting\Accounting\Accounting.App\bin\Debug\Accounting.App.exe
+D:\c#projects\2\Accounting\Accounting\Accounting.App\bin\Debug\Accounting.App.pdb
+D:\c#projects\2\Accounting\Accounting\Accounting.App\obj\Debug\Accounting.App.csprojResolveAssemblyReference.cache
+D:\c#projects\2\Accounting\Accounting\Accounting.App\obj\Debug\Accounting.App.Properties.Resources.resources
+D:\c#projects\2\Accounting\Accounting\Accounting.App\obj\Debug\Accounting.App.csproj.GenerateResource.Cache
+D:\c#projects\2\Accounting\Accounting\Accounting.App\obj\Debug\Accounting.App.exe
+D:\c#projects\2\Accounting\Accounting\Accounting.App\obj\Debug\Accounting.App.pdb

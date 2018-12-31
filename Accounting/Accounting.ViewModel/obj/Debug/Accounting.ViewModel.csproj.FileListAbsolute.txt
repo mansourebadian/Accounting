@@ -1,0 +1,4 @@
+D:\c#projects\2\Accounting\Accounting\Accounting.ViewModel\bin\Debug\Accounting.ViewModel.dll
+D:\c#projects\2\Accounting\Accounting\Accounting.ViewModel\bin\Debug\Accounting.ViewModel.pdb
+D:\c#projects\2\Accounting\Accounting\Accounting.ViewModel\obj\Debug\Accounting.ViewModel.dll
+D:\c#projects\2\Accounting\Accounting\Accounting.ViewModel\obj\Debug\Accounting.ViewModel.pdb
