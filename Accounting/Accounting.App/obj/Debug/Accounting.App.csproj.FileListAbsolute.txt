@@ -17,3 +17,4 @@ D:\c#projects\2\Accounting\Accounting\Accounting.App\bin\Debug\EntityFramework.x
 D:\c#projects\2\Accounting\Accounting\Accounting.App\bin\Debug\EntityFramework.SqlServer.xml
 D:\c#projects\2\Accounting\Accounting\Accounting.App\bin\Debug\Accounting.Utilities.dll
 D:\c#projects\2\Accounting\Accounting\Accounting.App\bin\Debug\Accounting.Utilities.pdb
+D:\c#projects\2\Accounting\Accounting\Accounting.App\obj\Debug\Accounting.App.frmAddOrEdit.resources

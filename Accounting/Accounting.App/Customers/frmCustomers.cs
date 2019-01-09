@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Accounting.DataLayer.Context;
+using Accounting.App;
 
 
 namespace Accounting.App
@@ -48,7 +49,11 @@ namespace Accounting.App
 
         private void btnAddNewCustomer_Click(object sender, EventArgs e)
         {
-
+            frmAddOrEdit frm = new frmAddOrEdit();
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                BindGrid();
+            }
         }
 
         private void btnDeleteCustomer_Click(object sender, EventArgs e)
