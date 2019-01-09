@@ -6,3 +6,14 @@ D:\c#projects\2\Accounting\Accounting\Accounting.App\obj\Debug\Accounting.App.Pr
 D:\c#projects\2\Accounting\Accounting\Accounting.App\obj\Debug\Accounting.App.csproj.GenerateResource.Cache
 D:\c#projects\2\Accounting\Accounting\Accounting.App\obj\Debug\Accounting.App.exe
 D:\c#projects\2\Accounting\Accounting\Accounting.App\obj\Debug\Accounting.App.pdb
+D:\c#projects\2\Accounting\Accounting\Accounting.App\obj\Debug\Accounting.App.Form1.resources
+D:\c#projects\2\Accounting\Accounting\Accounting.App\obj\Debug\Accounting.App.frmCustomers.resources
+D:\c#projects\2\Accounting\Accounting\Accounting.App\bin\Debug\Accounting.DataLayer.dll
+D:\c#projects\2\Accounting\Accounting\Accounting.App\bin\Debug\EntityFramework.dll
+D:\c#projects\2\Accounting\Accounting\Accounting.App\bin\Debug\EntityFramework.SqlServer.dll
+D:\c#projects\2\Accounting\Accounting\Accounting.App\bin\Debug\Accounting.DataLayer.pdb
+D:\c#projects\2\Accounting\Accounting\Accounting.App\bin\Debug\Accounting.DataLayer.dll.config
+D:\c#projects\2\Accounting\Accounting\Accounting.App\bin\Debug\EntityFramework.xml
+D:\c#projects\2\Accounting\Accounting\Accounting.App\bin\Debug\EntityFramework.SqlServer.xml
+D:\c#projects\2\Accounting\Accounting\Accounting.App\bin\Debug\Accounting.Utilities.dll
+D:\c#projects\2\Accounting\Accounting\Accounting.App\bin\Debug\Accounting.Utilities.pdb
