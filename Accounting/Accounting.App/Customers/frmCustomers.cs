@@ -77,5 +77,19 @@ namespace Accounting.App
                 RtlMessageBox.Show("لطفا شخصی را انتخاب نمایید.");
             }
         }
+
+        private void btnEditCustomer_Click(object sender, EventArgs e)
+        {
+            if (dgvCustomers.CurrentRow != null)
+            {
+                int customerId = int.Parse(dgvCustomers.CurrentRow.Cells[0].Value.ToString());
+                frmAddOrEdit frmAddOrEdit = new frmAddOrEdit();
+                frmAddOrEdit.CustomerId = customerId;
+                if (frmAddOrEdit.ShowDialog() == DialogResult.OK)
+                {
+                    BindGrid();
+                }
+            }
+        }
     }
 }
