@@ -8,3 +8,5 @@ D:\c#projects\2\Accounting\Accounting\Accounting.DataLayer\bin\Debug\EntityFrame
 D:\c#projects\2\Accounting\Accounting\Accounting.DataLayer\obj\Debug\Accounting.DataLayer.csprojResolveAssemblyReference.cache
 D:\c#projects\2\Accounting\Accounting\Accounting.DataLayer\obj\Debug\Accounting.DataLayer.dll
 D:\c#projects\2\Accounting\Accounting\Accounting.DataLayer\obj\Debug\Accounting.DataLayer.pdb
+D:\c#projects\2\Accounting\Accounting\Accounting.DataLayer\bin\Debug\Accounting.ViewModel.dll
+D:\c#projects\2\Accounting\Accounting\Accounting.DataLayer\bin\Debug\Accounting.ViewModel.pdb

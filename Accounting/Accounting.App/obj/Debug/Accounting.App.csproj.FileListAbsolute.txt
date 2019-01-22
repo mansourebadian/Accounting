@@ -18,3 +18,6 @@ D:\c#projects\2\Accounting\Accounting\Accounting.App\bin\Debug\EntityFramework.S
 D:\c#projects\2\Accounting\Accounting\Accounting.App\bin\Debug\Accounting.Utilities.dll
 D:\c#projects\2\Accounting\Accounting\Accounting.App\bin\Debug\Accounting.Utilities.pdb
 D:\c#projects\2\Accounting\Accounting\Accounting.App\obj\Debug\Accounting.App.frmAddOrEdit.resources
+D:\c#projects\2\Accounting\Accounting\Accounting.App\obj\Debug\Accounting.App.frmNewAccounting.resources
+D:\c#projects\2\Accounting\Accounting\Accounting.App\bin\Debug\Accounting.ViewModel.dll
+D:\c#projects\2\Accounting\Accounting\Accounting.App\bin\Debug\Accounting.ViewModel.pdb

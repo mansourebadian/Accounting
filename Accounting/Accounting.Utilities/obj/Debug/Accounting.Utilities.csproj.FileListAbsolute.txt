@@ -2,3 +2,4 @@ D:\c#projects\2\Accounting\Accounting\Accounting.Utilities\bin\Debug\Accounting.
 D:\c#projects\2\Accounting\Accounting\Accounting.Utilities\bin\Debug\Accounting.Utilities.pdb
 D:\c#projects\2\Accounting\Accounting\Accounting.Utilities\obj\Debug\Accounting.Utilities.dll
 D:\c#projects\2\Accounting\Accounting\Accounting.Utilities\obj\Debug\Accounting.Utilities.pdb
+D:\c#projects\2\Accounting\Accounting\Accounting.Utilities\obj\Debug\Accounting.Utilities.csprojResolveAssemblyReference.cache

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Accounting.DataLayer.Repositories;
 using System.Data.Entity;
+using Accounting.ViewModel.Customers;
 
 namespace Accounting.DataLayer.Services
 {
@@ -57,6 +58,23 @@ namespace Accounting.DataLayer.Services
             return db.Customers.Where(c => c.FullName.Contains(parameter) || c.Email.Contains(parameter) || c.Mobile.Contains(parameter)).ToList();
         }
 
+        public List<ListCustomerViewModel> GetNameCustomers(string filter = "")
+        {
+            if (filter == "")
+            {
+                return db.Customers.Select(c => new ListCustomerViewModel()
+                {
+                    CustomerID = c.CustomerID,
+                    FullName = c.FullName
+                }).ToList();
+            }
+            return db.Customers.Where(c => c.FullName.Contains(filter)).Select(c => new ListCustomerViewModel()
+            {
+                CustomerID = c.CustomerID,
+                FullName = c.FullName
+            }).ToList();
+        }
+
         public bool InsertCustomer(Customers customer)
         {
             try
@@ -70,7 +88,7 @@ namespace Accounting.DataLayer.Services
             }
         }
 
-    
+
 
         public bool UpdateCustomer(Customers customer)
         {
@@ -83,8 +101,8 @@ namespace Accounting.DataLayer.Services
             {
                 db.Entry(local).State = EntityState.Detached;
             }
-            db.Entry(customer).State=EntityState.Modified;
-                return true;
+            db.Entry(customer).State = EntityState.Modified;
+            return true;
             //}
             //catch
             //{
