@@ -18,5 +18,7 @@ namespace Accounting.DataLayer.Repositories
         bool DeleteCustomer(int customerId);
         List<ListCustomerViewModel> GetNameCustomers(string filter = "");
         int GetCustomerIdByName(string Name);
+        string GetCustomerById(object costomerID);
+         string GetCustomerNameById(int customerId);
     }
 }

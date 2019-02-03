@@ -63,6 +63,16 @@ namespace Accounting.App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1019607 {
+            get {
+                object obj = ResourceManager.GetObject("1019607", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1370791030_credit_card {
             get {
                 object obj = ResourceManager.GetObject("_1370791030_credit_card", resourceCulture);
@@ -206,6 +216,16 @@ namespace Accounting.App.Properties {
         internal static System.Drawing.Bitmap _1371476499_todo_list {
             get {
                 object obj = ResourceManager.GetObject("_1371476499_todo_list", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap income {
+            get {
+                object obj = ResourceManager.GetObject("income", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
