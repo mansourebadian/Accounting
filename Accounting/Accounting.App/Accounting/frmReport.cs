@@ -9,14 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Accounting.DataLayer;
 using Accounting.DataLayer.Context;
-using Accounting.Utilities.Convertor;
+using Accounting.ViewModel.Customers;
+using Accounting.utility.Convertor;
 
 namespace Accounting.App
 {
     public partial class frmReport : Form
     {
-        public int TypeID=0;
-
+        public int TypeID = 0;
         public frmReport()
         {
             InitializeComponent();
@@ -24,6 +24,19 @@ namespace Accounting.App
 
         private void frmReport_Load(object sender, EventArgs e)
         {
+            using (UnitOfWork db = new UnitOfWork())
+            {
+                List<ListCustomerViewModel> list = new List<ListCustomerViewModel>();
+                list.Add(new ListCustomerViewModel()
+                {
+                    CustomerID = 0,
+                    FullName = "انتخاب کنید"
+                });
+                list.AddRange(db.CustomerRepository.GetNameCustomers());
+                cbCustomer.DataSource = list;
+                cbCustomer.DisplayMember = "FullName";
+                cbCustomer.ValueMember = "CustomerID";
+            }
             if (TypeID == 1)
             {
                 this.Text = "گزارش دریافتی ها";
@@ -32,27 +45,52 @@ namespace Accounting.App
             {
                 this.Text = "گزارش پرداختی ها";
             }
-            Filter();
         }
 
         private void btnFilter_Click(object sender, EventArgs e)
         {
             Filter();
         }
+
+
         void Filter()
         {
-            using(UnitOfWork db=new UnitOfWork())
+            using (UnitOfWork db = new UnitOfWork())
             {
-                var result = db.AccountingRepository.Get(a => a.TypeID == TypeID);
-                //dgReport.AutoGenerateColumns = false;
-                //dgReport.DataSource = result;
+                List<DataLayer.Accounting> result = new List<DataLayer.Accounting>();
+                DateTime? startDate;
+                DateTime? endDate;
+                if ((int)cbCustomer.SelectedValue != 0)
+                {
+                    int customerId = int.Parse(cbCustomer.SelectedValue.ToString());
+                    result.AddRange(db.AccountingRepository.Get(a => a.TypeID == TypeID && a.CustomerID == customerId));
+                }
+                else
+                {
+                    result.AddRange(db.AccountingRepository.Get(a => a.TypeID == TypeID));
+                }
+
+                if (txtFromDate.Text != "    /  /")
+                {
+                    startDate = Convert.ToDateTime(txtFromDate.Text);
+                    startDate = DateConvertor.ToMiladi(startDate.Value);
+                    result = result.Where(r => r.DateTime >= startDate.Value).ToList();
+                }
+                if (txtToDate.Text != "    /  /")
+                {
+                    endDate = Convert.ToDateTime(txtToDate.Text);
+                    endDate = DateConvertor.ToMiladi(endDate.Value);
+                    result = result.Where(r => r.DateTime <= endDate.Value).ToList();
+                }
+
                 dgReport.Rows.Clear();
                 foreach (var accounting in result)
                 {
-                    var customerName = db.CustomerRepository.GetCustomerNameById(accounting.CustomerID);
+                    string customerName = db.CustomerRepository.GetCustomerNameById(accounting.CustomerID);
                     dgReport.Rows.Add(accounting.ID, customerName, accounting.Amount, accounting.DateTime.ToShamsi(), accounting.Description);
                 }
             }
+
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -65,13 +103,14 @@ namespace Accounting.App
             if (dgReport.CurrentRow != null)
             {
                 int id = int.Parse(dgReport.CurrentRow.Cells[0].Value.ToString());
-                if(RtlMessageBox.Show("آیا از حذف مطمئن هستید؟", "هشدار", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (RtlMessageBox.Show("آیا از حذف مطمئتن هستید ؟", "هشدار", MessageBoxButtons.YesNo) ==
+                    DialogResult.Yes)
                 {
-                    using(UnitOfWork db=new UnitOfWork())
+                    using (UnitOfWork db = new UnitOfWork())
                     {
                         db.AccountingRepository.Delete(id);
                         db.Save();
-                        Filter ();
+                        Filter();
                     }
                 }
             }
