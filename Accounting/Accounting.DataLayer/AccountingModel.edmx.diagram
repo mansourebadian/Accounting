@@ -6,11 +6,12 @@
     <edmx:Diagrams>
       <Diagram DiagramId="b2c2345a91344a2f9fca682d87a6ef35" Name="Diagram1">
         <EntityTypeShape EntityType="Accounting_DBModel.Customers" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Accounting_DBModel.Accounting" Width="1.5" PointX="3" PointY="0.75" />
         <EntityTypeShape EntityType="Accounting_DBModel.AccountingTypes" Width="1.5" PointX="0.75" PointY="4.25" />
+        <EntityTypeShape EntityType="Accounting_DBModel.Accounting" Width="1.5" PointX="3" PointY="2" />
         <AssociationConnector Association="Accounting_DBModel.FK_Accounting_AccountingTypes" />
         <AssociationConnector Association="Accounting_DBModel.FK_Accounting_Customers" />
-      </Diagram>
+        <EntityTypeShape EntityType="Accounting_DBModel.Login" Width="1.5" PointX="5.375" PointY="0.75" />
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

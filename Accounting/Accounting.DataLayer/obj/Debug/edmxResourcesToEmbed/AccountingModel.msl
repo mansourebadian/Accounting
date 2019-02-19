@@ -13,10 +13,18 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="AccountingTypes">
+      <EntityTypeMapping TypeName="Accounting_DBModel.AccountingTypes">
+        <MappingFragment StoreEntitySet="AccountingTypes">
+          <ScalarProperty Name="TypeTitle" ColumnName="TypeTitle" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Accounting">
       <EntityTypeMapping TypeName="Accounting_DBModel.Accounting">
         <MappingFragment StoreEntitySet="Accounting">
-          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="DateTitle" ColumnName="DateTitle" />
           <ScalarProperty Name="Description" ColumnName="Description" />
           <ScalarProperty Name="Amount" ColumnName="Amount" />
           <ScalarProperty Name="TypeID" ColumnName="TypeID" />
@@ -25,11 +33,12 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="AccountingTypes">
-      <EntityTypeMapping TypeName="Accounting_DBModel.AccountingTypes">
-        <MappingFragment StoreEntitySet="AccountingTypes">
-          <ScalarProperty Name="TypeTitle" ColumnName="TypeTitle" />
-          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+    <EntitySetMapping Name="Login">
+      <EntityTypeMapping TypeName="Accounting_DBModel.Login">
+        <MappingFragment StoreEntitySet="Login">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="LoginID" ColumnName="LoginID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

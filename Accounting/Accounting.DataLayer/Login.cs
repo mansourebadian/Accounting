@@ -12,16 +12,10 @@ namespace Accounting.DataLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class Accounting
+    public partial class Login
     {
-        public int ID { get; set; }
-        public int CustomerID { get; set; }
-        public int TypeID { get; set; }
-        public int Amount { get; set; }
-        public string Description { get; set; }
-        public System.DateTime DateTitle { get; set; }
-    
-        public virtual AccountingTypes AccountingTypes { get; set; }
-        public virtual Customers Customers { get; set; }
+        public int LoginID { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
     }
 }

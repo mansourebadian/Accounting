@@ -69,7 +69,7 @@ namespace Accounting.App
                         Amount = int.Parse(txtAmount.Value.ToString()),
                         CustomerID = db.CustomerRepository.GetCustomerIdByName(txtName.Text),
                         TypeID = (rbRecive.Checked) ? 1 : 2,
-                        DateTime = DateTime.Now,
+                        DateTitle = DateTime.Now,
                         Description = txtDescription.Text
                     };
                     if (AccountID == 0)

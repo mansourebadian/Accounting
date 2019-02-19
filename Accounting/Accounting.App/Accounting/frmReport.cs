@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Accounting.DataLayer;
 using Accounting.DataLayer.Context;
-using Accounting.ViewModel.Customers;
 using Accounting.utility.Convertor;
+using Accounting.ViewModel.Customers;
 
 namespace Accounting.App
 {
@@ -74,20 +74,20 @@ namespace Accounting.App
                 {
                     startDate = Convert.ToDateTime(txtFromDate.Text);
                     startDate = DateConvertor.ToMiladi(startDate.Value);
-                    result = result.Where(r => r.DateTime >= startDate.Value).ToList();
+                    result = result.Where(r => r.DateTitle >= startDate.Value).ToList();
                 }
                 if (txtToDate.Text != "    /  /")
                 {
                     endDate = Convert.ToDateTime(txtToDate.Text);
                     endDate = DateConvertor.ToMiladi(endDate.Value);
-                    result = result.Where(r => r.DateTime <= endDate.Value).ToList();
+                    result = result.Where(r => r.DateTitle <= endDate.Value).ToList();
                 }
 
                 dgReport.Rows.Clear();
                 foreach (var accounting in result)
                 {
                     string customerName = db.CustomerRepository.GetCustomerNameById(accounting.CustomerID);
-                    dgReport.Rows.Add(accounting.ID, customerName, accounting.Amount, accounting.DateTime.ToShamsi(), accounting.Description);
+                    dgReport.Rows.Add(accounting.ID, customerName, accounting.Amount, accounting.DateTitle.ToShamsi(), accounting.Description);
                 }
             }
 
