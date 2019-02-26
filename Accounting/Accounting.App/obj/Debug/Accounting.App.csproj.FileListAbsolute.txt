@@ -23,3 +23,13 @@ D:\c#projects\2\Accounting\Accounting\Accounting.App\bin\Debug\Accounting.ViewMo
 D:\c#projects\2\Accounting\Accounting\Accounting.App\bin\Debug\Accounting.ViewModel.pdb
 D:\c#projects\2\Accounting\Accounting\Accounting.App\obj\Debug\Accounting.App.frmReport.resources
 D:\c#projects\2\Accounting\Accounting\Accounting.App\obj\Debug\Accounting.App.frmLogin.resources
+D:\c#projects\2\Accounting\Accounting\Accounting.App\bin\Debug\Stimulsoft.Base.dll
+D:\c#projects\2\Accounting\Accounting\Accounting.App\bin\Debug\Stimulsoft.Report.dll
+D:\c#projects\2\Accounting\Accounting\Accounting.App\bin\Debug\Stimulsoft.Report.Win.dll
+D:\c#projects\2\Accounting\Accounting\Accounting.App\bin\Debug\Stimulsoft.Controls.Win.dll
+D:\c#projects\2\Accounting\Accounting\Accounting.App\bin\Debug\Stimulsoft.Controls.dll
+D:\c#projects\2\Accounting\Accounting\Accounting.App\bin\Debug\Stimulsoft.Base.xml
+D:\c#projects\2\Accounting\Accounting\Accounting.App\bin\Debug\Stimulsoft.Report.xml
+D:\c#projects\2\Accounting\Accounting\Accounting.App\bin\Debug\Stimulsoft.Report.Win.xml
+D:\c#projects\2\Accounting\Accounting\Accounting.App\bin\Debug\Stimulsoft.Controls.Win.xml
+D:\c#projects\2\Accounting\Accounting\Accounting.App\bin\Debug\Stimulsoft.Controls.xml

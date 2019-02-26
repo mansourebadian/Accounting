@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Accounting.DataLayer.Services
 {
-    public class GenericRepository<TEntity> where TEntity:class
+    public class GenericRepository<TEntity> where TEntity : class
     {
         private Accounting_DBEntities _db;
         private DbSet<TEntity> _dbSet;
@@ -19,18 +19,31 @@ namespace Accounting.DataLayer.Services
             _dbSet = _db.Set<TEntity>();
         }
 
-        public virtual void Insert(TEntity entity)
+        public virtual IEnumerable<TEntity> Get(Expression<Func<TEntity, bool>> where = null)
         {
-            _dbSet.Add(entity);
+            IQueryable<TEntity> query = _dbSet;
+
+            if (where != null)
+            {
+                query = query.Where(where);
+            }
+
+            return query.ToList();
         }
+
         public virtual TEntity GetById(object Id)
         {
             return _dbSet.Find(Id);
         }
 
+        public virtual void Insert(TEntity entity)
+        {
+            _dbSet.Add(entity);
+        }
+
         public virtual void Update(TEntity entity)
         {
-            _dbSet.Attach(entity);
+
             _db.Entry(entity).State = EntityState.Modified;
         }
 
@@ -38,8 +51,9 @@ namespace Accounting.DataLayer.Services
         {
             if (_db.Entry(entity).State == EntityState.Detached)
             {
-                _dbSet.Attach(entity);   
+                _dbSet.Attach(entity);
             }
+
             _dbSet.Remove(entity);
         }
 
@@ -48,15 +62,11 @@ namespace Accounting.DataLayer.Services
             var entity = GetById(Id);
             Delete(entity);
         }
+    }
 
-        public virtual IEnumerable<TEntity> Get(Expression<Func<TEntity,bool>> where = null)
-        {
-            IQueryable<TEntity> query = _dbSet;
-            if (where != null)
-            {
-                query = query.Where(where);
-            }
-            return query.ToList();
-        }
+
+    public class test
+    {
+        // GenericRepository<Customers> customer=new GenericRepository<Customers>();
     }
 }

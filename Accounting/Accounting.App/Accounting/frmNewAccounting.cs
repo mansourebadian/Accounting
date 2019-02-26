@@ -9,13 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Accounting.DataLayer.Context;
 using ValidationComponents;
+using Accounting = Accounting.DataLayer.Accounting;
 
 namespace Accounting.App
 {
     public partial class frmNewAccounting : Form
     {
-        UnitOfWork db;
-        public int AccountID=0;
+        private UnitOfWork db;
+        public int AccountID = 0;
         public frmNewAccounting()
         {
             InitializeComponent();
@@ -24,12 +25,12 @@ namespace Accounting.App
         private void frmNewAccounting_Load(object sender, EventArgs e)
         {
             db = new UnitOfWork();
-            dgvCustomers.AutoGenerateColumns = false;
-            dgvCustomers.DataSource = db.CustomerRepository.GetNameCustomers();
+            dgvCustomeers.AutoGenerateColumns = false;
+            dgvCustomeers.DataSource = db.CustomerRepository.GetNameCustomers();
             if (AccountID != 0)
             {
                 var account = db.AccountingRepository.GetById(AccountID);
-                txtAmount.Value = int.Parse(account.Amount.ToString());
+                txtAmount.Text = account.Amount.ToString();
                 txtDescription.Text = account.Description;
                 txtName.Text = db.CustomerRepository.GetCustomerNameById(account.CustomerID);
                 if (account.TypeID == 1)
@@ -40,21 +41,27 @@ namespace Accounting.App
                 {
                     rbPay.Checked = true;
                 }
+
                 this.Text = "ویرایش";
                 btnSave.Text = "ویرایش";
                 db.Dispose();
             }
+
+            //using (UnitOfWork db2=new UnitOfWork())
+            //{
+
+            //}
         }
 
         private void txtFilter_TextChanged(object sender, EventArgs e)
         {
-            dgvCustomers.AutoGenerateColumns = false;
-            dgvCustomers.DataSource = db.CustomerRepository.GetNameCustomers(txtFilter.Text);
+            dgvCustomeers.AutoGenerateColumns = false;
+            dgvCustomeers.DataSource = db.CustomerRepository.GetNameCustomers(txtFilter.Text);
         }
 
-        private void dgvCustomers_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvCustomeers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtName.Text = dgvCustomers.CurrentRow.Cells[0].Value.ToString();
+            txtName.Text = dgvCustomeers.CurrentRow.Cells[0].Value.ToString();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -71,24 +78,27 @@ namespace Accounting.App
                         TypeID = (rbRecive.Checked) ? 1 : 2,
                         DateTitle = DateTime.Now,
                         Description = txtDescription.Text
+
                     };
                     if (AccountID == 0)
                     {
                         db.AccountingRepository.Insert(accounting);
+                        db.Save();
                     }
                     else
                     {
                         accounting.ID = AccountID;
                         db.AccountingRepository.Update(accounting);
+
                     }
                     db.Save();
+                    db.Dispose();
                     DialogResult = DialogResult.OK;
                 }
                 else
                 {
-                    RtlMessageBox.Show("لطفا نوع تراکنش را انتخاب کنید.");
+                    RtlMessageBox.Show("لطفا نوع تراکنش را انتخاب کنید");
                 }
-                db.Dispose();
             }
         }
     }
